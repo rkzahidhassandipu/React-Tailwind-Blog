@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { FaFacebook, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
 
 const Navbar = () => {
     // navItems
@@ -24,7 +25,13 @@ const Navbar = () => {
                 }
             </ul>
 
-            
+            {/* menu icons */}
+            <div className='text-white lg:flex gap-4 items-center hidden'>
+                <a href="" className='hover:text-orange-500'><FaFacebook /></a>
+                <a href="" className='hover:text-orange-500'><FaLinkedinIn /></a>
+                <a href="" className='hover:text-orange-500'><FaTwitter /></a>
+                <button className='bg-orange-500 px-6 py-2 font-medium rounded hover:bg-white hover:text-orange-500 transition-all duration-200 ease-in'>Log in</button>
+            </div>
         </nav>
     </div>
   )
