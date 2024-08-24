@@ -1,8 +1,11 @@
 import React from 'react'
 import {Link} from "react-router-dom";
+import {FaUser} from "react-icons/fa"
 
-const BlogCards = ({blogs}) => {
-    const filteredBlogs = blogs;
+const BlogCards = ({blogs, currentPage, selectedCategory, pageSize}) => {
+    const filteredBlogs = blogs.filter((blogs) => 
+        !selectedCategory || blogs.category === selectedCategory
+    ).slice((currentPage -1) * pageSize, currentPage * pageSize);
     // console.log(filteredBlogs)
   return (
     <div className='grid md:grid-cols-3 grid-cols-1 gap-8'>
@@ -12,7 +15,7 @@ const BlogCards = ({blogs}) => {
                     <img src={blog.image} alt="" className='w-full' />
                 </div>
                 <h3 className='mb-2 mt-4 font-bold hover:text-blue-600 cursor-pointer'>{blog.title}</h3>
-                <p className='mb-2 text-gray-600 '>{blog.author}</p>
+                <p className='mb-2 text-gray-600 '><FaUser className='inline-flex items-center mr-2' />{blog.author}</p>
                 <p>Published: { blog.published_date}</p>
             </Link>)
         }
