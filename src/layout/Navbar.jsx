@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { FaFacebook, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
+import { FaBars, FaFacebook, FaLinkedinIn, FaTwitter, FaXmark } from "react-icons/fa6";
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen)
+    }
     // navItems
     const navItems = [
         {path: "/", link: "Home"},
@@ -12,15 +17,23 @@ const Navbar = () => {
         {path: "/contact", link: "Contact"},
     ]
   return (
-    <div className='bg-black'>
-        <nav className='px-4 py-4 mx-auto flex justify-between items-center'> 
+    <header className='bg-black text-white'>
+        <nav className='px-16 py-4 mx-auto flex justify-between items-center '> 
             <a href="" className='text-xl font-bold text-white'>Design <span className='text-orange-500'>DK</span></a>
 
             {/* navitems for lg devices */}
             <ul className='md:flex gap-12 text-lg hidden'>
                 {
-                    navItems.map(({path, link}) => <li className='text-white'>
-                        <NavLink to={path}>{link}</NavLink>
+                    navItems.map(({path, link}) => <li key={path} className='text-white'>
+                        <NavLink 
+                             className={({ isActive, isPending }) =>
+                                isActive
+                                  ? "active"
+                                  : isPending
+                                  ? "pending"
+                                  : ""
+                              }
+                        to={path}>{link}</NavLink>
                     </li>)
                 }
             </ul>
@@ -33,9 +46,28 @@ const Navbar = () => {
                 <button className='bg-orange-500 px-6 py-2 font-medium rounded hover:bg-white hover:text-orange-500 transition-all duration-200 ease-in'>Log in</button>
             </div>
 
+            {/* mobile menu btn display mobile screen */}
+            <div className='md:hidden'>
+                <button onClick={toggleMenu} className='cursor-pointer'>
+                    {
+                        isMenuOpen ? <FaXmark /> : <FaBars className='w-5 h-5' />
+                    }
+                </button>
+            </div>
 
         </nav>
-    </div>
+
+        {/* menu items only for mobile */}
+        <div>
+            <ul className={`md:hidden gap-12 text-lg block space-y-4 py-6 px-4 bg-white ${isMenuOpen ? "transition-all ease-out duration-150" : "hidden"}`}>
+                {
+                    navItems.map(({path, link}) => <li key={path} className='text-black'>
+                        <NavLink onClick={toggleMenu} to={path}>{link}</NavLink>
+                    </li>)
+                }
+            </ul>
+        </div>
+    </header>
   )
 }
 
