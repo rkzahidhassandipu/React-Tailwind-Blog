@@ -1,8 +1,11 @@
 import React from 'react'
+import Banner from '../components/Banner'
 
 const Home = () => {
   return (
-    <div className='bg-slate-500'>Home</div>
+    <div>
+      <Banner />
+    </div>
   )
 }
 
