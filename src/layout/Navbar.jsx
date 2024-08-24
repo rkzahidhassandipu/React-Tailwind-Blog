@@ -13,7 +13,7 @@ const Navbar = () => {
     ]
   return (
     <div className='bg-black'>
-        <nav className='px-4 py-4'> 
+        <nav className='px-4 py-4 mx-auto flex justify-between items-center'> 
             <a href="" className='text-xl font-bold text-white'>Design <span className='text-orange-500'>DK</span></a>
 
             {/* navitems for lg devices */}
@@ -32,6 +32,8 @@ const Navbar = () => {
                 <a href="" className='hover:text-orange-500'><FaTwitter /></a>
                 <button className='bg-orange-500 px-6 py-2 font-medium rounded hover:bg-white hover:text-orange-500 transition-all duration-200 ease-in'>Log in</button>
             </div>
+
+
         </nav>
     </div>
   )
