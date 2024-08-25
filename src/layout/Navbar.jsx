@@ -16,6 +16,16 @@ const Navbar = () => {
         {path: "/blogs", link: "Blogs"},
         {path: "/contact", link: "Contact"},
     ]
+
+    // modal details
+
+    const openModal = () => {
+        setIsMenuOpen(true)
+    }
+
+    const clogeModal = () => {
+        setIsMenuOpen(false)
+    }
   return (
     <header className='bg-black text-white'>
         <nav className='px-16 py-4 mx-auto flex justify-between items-center '> 
