@@ -97,8 +97,8 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div>
-                <p></p>
+            <div className='flex flex-col justify-between pt-5 pb-10 border-t border-gray-800 sm:flex-row'>
+                <p>&copy; Copyright 2024 || All right resereved.</p>
             </div>
         </div>
     </div>
