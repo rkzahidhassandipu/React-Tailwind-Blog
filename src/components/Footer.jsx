@@ -85,6 +85,10 @@ const Footer = () => {
                         </ul>
                     </div>
 
+                    <div>
+                        <p>Subscribe for Updates</p>
+                    </div>
+
                 </div>
             </div>
         </div>
