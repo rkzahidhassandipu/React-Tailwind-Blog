@@ -41,7 +41,7 @@ const BlogsPage = () => {
     <div>
         {/* category section */}
         <div>
-            <CategorySelection />
+            <CategorySelection onSelectCategory={handleCategoryChange} selectedCategory={selectedCategory} activeCategory={activeCategory} />
         </div>
 
         {/* blogcards section */}
