@@ -67,6 +67,24 @@ const Footer = () => {
                         </ul>
                     </div>
 
+                    <div>
+                        <p className='font-medium -tracking-wide text-gray-300'>Business</p>
+                        <ul className='mt-2 space-y-2'>
+                            <li>
+                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">News</a>
+                            </li>
+                            <li>
+                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">World</a>
+                            </li>
+                            <li>
+                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">Games</a>
+                            </li>
+                            <li>
+                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">References</a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </div>
