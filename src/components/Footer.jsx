@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
     <div className='bg-gray-900'>
-        <div className='px-16 pt-16 pb-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-4'>
+        <div className='px-16 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-4'>
             <div>
                 <div className='grid grid-cols-2 gap-5 lg:col-span-4 md:grid-cols-6'>
                     <div>
@@ -97,8 +98,13 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col justify-between pt-5 pb-10 border-t border-gray-800 sm:flex-row'>
-                <p>&copy; Copyright 2024 || All right resereved.</p>
+            <div className='flex flex-col justify-between pt-5 pb-10 mt-8 border-t border-gray-800 sm:flex-row'>
+                <p className='text-sm text-gray-500 '>&copy; Copyright 2024 || All right resereved.</p>
+                <div className='flex items-center mt-4 space-x-4 sm:mt-0'>
+                    <a href="" className='text-gray-500 transition-all duration-300 hover:text-orange-500 '><FaTwitter className='h-6 w-6' /></a>
+                    <a href="" className='text-gray-500 transition-all duration-300 hover:text-orange-500 '><FaInstagram className='h-6 w-6' /></a>
+                    <a href="" className='text-gray-500 transition-all duration-300 hover:text-orange-500 '><FaFacebook className='h-6 w-6' /></a>
+                </div>
             </div>
         </div>
     </div>
