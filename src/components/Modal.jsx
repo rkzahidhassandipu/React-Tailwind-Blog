@@ -7,8 +7,11 @@ const Modal = ({isOpen, onClose}) => {
             <div className='bg-indigo-700 text-center p-5  h-96 lg:w-[500px] rounded shadow-md'>
                 <h2 className='text-xl font-extrabold mb-4 mt-6 uppercase'>Please Login Here!</h2>
                 <form action="" className='px-4'>
-                    <div>
+                    <div className='mb-5'>
                         <input type="email" name='email' id='email' placeholder='Example@gmail.com' className='w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 mx-6 text-base font-medium text-[#6b7280]' />
+                    </div>
+                    <div className='mb-5'>
+                        <input type="password" name='password' id='password' placeholder='Enter yor password' className='w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 mx-6 text-base font-medium text-[#6b7280]' />
                     </div>
                 </form>
             </div>
