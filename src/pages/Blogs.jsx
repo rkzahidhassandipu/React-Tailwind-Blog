@@ -10,7 +10,6 @@ const Blogs = () => {
 
       {/* all blogs container */}
       <div className='max-w-7xl mx-auto'>
-        <BlogsPage />
       </div>
     </div>
   )
