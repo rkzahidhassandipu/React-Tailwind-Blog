@@ -5,7 +5,7 @@ const Footer = () => {
     <div className='bg-gray-900'>
         <div className='px-16 pt-16 pb-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-4'>
             <div>
-                <div className='grid grid-cols-2 gap-5 lg:col-span-4 md:grid-cols-4'>
+                <div className='grid grid-cols-2 gap-5 lg:col-span-4 md:grid-cols-6'>
                     <div>
                         <p className='font-medium -tracking-wide text-gray-300'>Category</p>
                         <ul className='mt-2 space-y-2'>
@@ -85,8 +85,13 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div>
-                        <p>Subscribe for Updates</p>
+                    <div className='md:max-w-md lg:col-span-2 lg:mt-0 mt-5'>
+                        <p className='font-medium tracking-wide text-gray-300'>Subscribe for Updates</p>
+                        <form action="" className='mt-4 flex flex-col md:flex-row'>
+                            <input type="email" name='email' id='email' className='flex-grow w-full h-12 px-4 mb-3 transition-all duration-200 bg-white border border-gray-300 rounded shadow-sm aspect-auto md:mr-2 md:mb-0 focus:border-purple-400 focus:outline-none' />
+                            <button type='submit' className='inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md hover:bg-orange-500 focus:outline-none border'>Subscribe</button>
+                        </form>
+                        <p className='mt-4 text-sm text-gray-500'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum officiis optio, rerum repellat fugiat sit laudantium illum tempora itaque animi fugit magnam tempore! Consectetur similique sint ipsum recusandae fuga molestias!</p>
                     </div>
 
                 </div>
