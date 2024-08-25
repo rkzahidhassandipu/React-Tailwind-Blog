@@ -10,21 +10,24 @@ const Pagination = ({onPageChange, currentPage, blogs, pageSize}) => {
                 className={pageNumber === currentPage ? "activerPagination" : ""}
                 key={pageNumber}
             >
-                <button
+                <Link to=''
                     className="px-3 py-1 border rounded hover:bg-gray-200"
                     onClick={() => onPageChange(pageNumber)}
                 >
                     {pageNumber}
-                </button>
+                </Link>
             </li>
         ));
     };
     
   return (
-    <ul>
+    <ul className='pagination my-8 flex-wrap gap-4'>
         <li>
             <button onClick={() => onPageChange(currentPage - 1 )} disabled={currentPage === 1}>Previous</button>
         </li>
+        <div >
+            {renderPaginationLinks()}
+        </div>
         <li>
             <button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages}>Next</button>
         </li>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import BlogCards from './BlogCards';
 import Pagination from './Pagination';
+import CategorySelection from './CategorySelection';
 
 const BlogsPage = () => {
     const [blogs, setBlogs] = useState([]);
@@ -39,7 +40,9 @@ const BlogsPage = () => {
     
     <div>
         {/* category section */}
-        <div>Page Category</div>
+        <div>
+            <CategorySelection onSelectCategory={handleCategoryChange} selectedCategory={selectedCategory} activeCategory={activeCategory} />
+        </div>
 
         {/* blogcards section */}
         <div>
