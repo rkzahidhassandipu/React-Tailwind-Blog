@@ -23,6 +23,24 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
+
+                    <div>
+                        <p className='font-medium -tracking-wide text-gray-300'>Apples</p>
+                        <ul className='mt-2 space-y-2'>
+                            <li>
+                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">Web</a>
+                            </li>
+                            <li>
+                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">eCommerce</a>
+                            </li>
+                            <li>
+                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">Business</a>
+                            </li>
+                            <li>
+                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">Entertainment</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
