@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaBars, FaFacebook, FaLinkedinIn, FaTwitter, FaXmark } from "react-icons/fa6";
+import Modal from '../components/Modal';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,6 +17,16 @@ const Navbar = () => {
         {path: "/blogs", link: "Blogs"},
         {path: "/contact", link: "Contact"},
     ]
+
+    // modal details
+
+    const openModal = () => {
+        setIsMenuOpen(true)
+    }
+
+    const clogeModal = () => {
+        setIsMenuOpen(false)
+    }
   return (
     <header className='bg-black text-white'>
         <nav className='px-16 py-4 mx-auto flex justify-between items-center '> 
@@ -43,8 +54,10 @@ const Navbar = () => {
                 <a href="" className='hover:text-orange-500'><FaFacebook /></a>
                 <a href="" className='hover:text-orange-500'><FaLinkedinIn /></a>
                 <a href="" className='hover:text-orange-500'><FaTwitter /></a>
-                <button className='bg-orange-500 px-6 py-2 font-medium rounded hover:bg-white hover:text-orange-500 transition-all duration-200 ease-in'>Log in</button>
+                <button onClick={openModal} className='bg-orange-500 px-6 py-2 font-medium rounded hover:bg-white hover:text-orange-500 transition-all duration-200 ease-in'>Log in</button>
             </div>
+            
+            <Modal isOpen={isMenuOpen} onClose={clogeModal} />
 
             {/* mobile menu btn display mobile screen */}
             <div className='md:hidden'>
