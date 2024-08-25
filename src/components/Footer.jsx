@@ -71,16 +71,16 @@ const Footer = () => {
                         <p className='font-medium -tracking-wide text-gray-300'>Business</p>
                         <ul className='mt-2 space-y-2'>
                             <li>
-                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">News</a>
+                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">Infopreneur</a>
                             </li>
                             <li>
-                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">World</a>
+                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">Personal</a>
                             </li>
                             <li>
-                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">Games</a>
+                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">Wiki</a>
                             </li>
                             <li>
-                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">References</a>
+                                <a className='text-gray-500 transition-colors duration-500 hover:text-orange-500' href="">Forum</a>
                             </li>
                         </ul>
                     </div>
