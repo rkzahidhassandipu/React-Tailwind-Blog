@@ -29,6 +29,10 @@ const SingleBlog = () => {
                 <p className='mb-3 text-gray-600 text-base'>
                     {content}
                 </p>
+
+                <div>
+                    
+                </div>
             </div>
         </div>
     </div>
