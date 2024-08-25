@@ -8,8 +8,8 @@ const SingleBlog = () => {
 
   return (
     <div>
-        <div>
-            <h2>Single Blog Page</h2>
+        <div className='py-40 bg-black text-center text-white px-4'>
+            <h1 className='text-5xl lg:text-7xl leading-snug font-bold mb-5'>Single Blog Page</h1>
         </div>
 
         <div className='max-w-7xl mx-auto my-12'>
@@ -30,8 +30,12 @@ const SingleBlog = () => {
                     {content}
                 </p>
 
-                <div>
+                <div className='text-base text-gray-500'>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam doloribus qui asperiores aliquam totam blanditiis sed sequi molestiae ratione eaque error modi, quasi repudiandae praesentium eius! Id, necessitatibus voluptatibus? Possimus!</p><br />
                     
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident magnam fuga saepe nesciunt. Nisi eveniet eos doloribus sint et, tempore, quae commodi, id fugiat dicta sapiente quia neque maxime recusandae.</p>
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil cumque illo voluptates a, tenetur nobis corrupti sunt totam enim maxime? Quasi nihil adipisci nisi consectetur, vel quae distinctio praesentium dolorem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quo quae repudiandae odit reiciendis. Nesciunt sequi ipsum officia voluptatum aspernatur nobis odit nostrum necessitatibus, numquam eum ipsa asperiores debitis quo.</p>
                 </div>
             </div>
         </div>
